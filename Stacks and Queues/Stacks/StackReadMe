@@ -1,0 +1,10 @@
+When to use/ Avoid Stack??
+
+
+Use:
+    -Lifo functionality (Last in is the first out)
+    -Chance of data corruption is minimum.  data corruption is minimum b/c we can only access last element
+
+Avoid:
+      -Random Access is not possible
+      
