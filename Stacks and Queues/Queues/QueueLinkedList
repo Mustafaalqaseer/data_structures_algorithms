@@ -1,0 +1,71 @@
+class Node:
+    def __init__(self,val):
+        self.val = val
+        self.next = None
+    
+
+
+class LinkedList():
+    def __init__(self):
+        self.head = self.tail = None
+
+    def __iter__(self):
+        curNode =self.head
+        while curNode:
+            yield curNode
+            curNode = curNode.next
+
+class Queue:
+    def __init__(self):
+        self.ll = LinkedList()
+
+    def __str__(self):
+        values = [str(node.val) for node in self.ll]
+        return ' '.join(values)
+
+    def enqueue(self, val):
+        new_node = Node(val)
+        if self.ll.head == None: 
+            self.ll.head = self.ll.tail = new_node
+        else:
+            self.ll.tail.next = new_node
+            self.ll.tail = new_node
+    def isEmpty(self):
+        if self.ll.head == None:
+            return True
+        
+        return False
+
+
+    def dequeue(self):
+        if self.isEmpty():
+            return "queue is empty can't dequeue "
+        
+        pop_node = self.ll.head
+        if self.ll.head == self.ll.tail:
+            self.ll.head = self.ll.tail == None
+            return pop_node
+        else:
+            self.ll.head = self.ll.head.next
+        return pop_node
+    
+    def peek(self):
+        if self.isEmpty():
+            return "queue is empty"
+        else:
+            return self.ll.head.val
+        
+
+
+queue = Queue()
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
+queue.enqueue(4)
+queue.dequeue()
+print(queue)
+print(queue.peek())
+    
+
+
+    

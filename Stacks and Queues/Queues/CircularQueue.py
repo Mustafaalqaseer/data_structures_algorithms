@@ -1,61 +1,76 @@
-from collections import deque
 
-
-class CircularQueue:
+class Queue:
     def __init__(self,capacity):
-        self.items = [None] * capacity
         self.capacity = capacity
+        self.items = [None] * capacity
         self.start = -1
-        self.top = -1
-        self.size = 0
+        self.back = -1
 
     def __str__(self):
-        values = [x for x in self.items]
+        values = [ str(element) for element in self.items()]
         return ' '.join(values)
-
+    
     def isFull(self):
-        return self.capacity == self.size
-
-
+        if self.start == 0 and (self.back + 1) == self.capacity:
+            return True
+        elif (self.back+1) == self.start:
+            return True
+        return False 
+    
     def isEmpty(self):
-        return self.size == 0
-
+        if self.back == -1:
+            return True
+        return False
+    
     def enqueue(self,val):
         if self.isFull():
-            print("que is full")
-            return
-
-        if self.isEmpty():
-            self.top = 0
-            self.start = 0
+            return "queue is full"
+        
+        if self.back + 1 == self.size:
+            self.back = 0
         else:
-            self.top = (self.top + 1) % self.capacity
-
-        self.items[self.top] = val
-        self.size+=1
-
+            self.back +=1
+            if self.start == -1:
+                self.start = 0
+        self.items[self.back] = val
+        return " element is inserted to end of queue"
+    
     def dequeue(self):
         if self.isEmpty():
-            print("queue is empty")
-            return None
-        dequeued_val = self.items[self.start]
-        self.size -=1
-        self.top = (self.top +1) % self.capacity
+            return "no element in queue"
+        else:
+            firstElement = self.items[self.start]
+            if self.start == self.back:
+                self.start = -1
+                self.back = -1
+            elif self.start == self.capacity:
+                self.start = 0
+            else:
+                self.start +=1
+            self.items[self.start] = None
+            return firstElement
+        
+    def peek(self):
+        if self.isEmpty():
+            return "queue is empty so no peek"
+        else:
+            return self.items[self.start]
+        
+    def delete(self):
+        self.items = [None] * self.capacity
+        self.start = self.back = -1
+            
+
+    
+
+    
+
+            
+
+        
+    
+    
 
 
 
-queue = CircularQueue(5)
-print(queue.items)  # Expected: [None, None, None, None, None]
-queue.enqueue(10)
-queue.enqueue(20)
-queue.enqueue(30)
-print(queue.items)  # Expected: [10, 20, 30, None, None]
-
-
-
-
-
-
-
-
-
+    
