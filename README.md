@@ -58,5 +58,5 @@ If you're also learning DSA or have questions about anything in this repository,
 
 
 Review Section 3. Question 1 - Three in One
-Review Section 3. Question  - Stack minimum
+Review Section 3. Question  - Stack minimums
  
