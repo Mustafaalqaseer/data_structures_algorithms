@@ -14,7 +14,24 @@ class PlateStack:
             self.stacks.append([item])
 
     def pop(self):
-        pass
+        while len(self.stacks)  and len(self.stacks[-1])== 0:
+            self.stacks.pop()
+        if len(self.stacks) == 0:
+            return None
+        else:
+            return self.stacks[-1].pop()
+    
+    def pop_at(self,stackNumber):
+        if len(self.stacks[stackNumber]) > 0:
+            self.stacks[stackNumber].pop()
+        else:
+            return None
+
+        
+    
+
+
+
 
 
 
