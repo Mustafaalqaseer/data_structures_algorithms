@@ -53,3 +53,10 @@ I will update this repository with new concepts I learn and problems I solve. Ch
 ## Let's Connect
 
 If you're also learning DSA or have questions about anything in this repository, don't hesitate to reach out. I'm happy to help and learn together :)
+
+
+
+
+Review Section 3. Question 1 - Three in One
+Review Section 3. Question  - Stack minimum
+ 
