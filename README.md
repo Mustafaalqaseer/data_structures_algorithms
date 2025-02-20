@@ -44,7 +44,7 @@ I'll be documenting resources I find helpful throughout my journey, including:
 While this is primarily my personal learning journey, I welcome discussions and insights! If you spot any issues or have suggestions for improvement, feel free to:
 - Open an issue
 - Submit a pull request
-- Email me at [your.email@example.com]
+- Email me at [mustafaalqaseer88@gmail.com]
 
 ## Progress Tracking
 
