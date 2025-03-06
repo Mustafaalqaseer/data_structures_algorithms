@@ -61,4 +61,6 @@ Review Section 3. Question 1 - Three in One
 Review Section 3. Question  - Stack minimum
 Review section 26: Exercise 53 - nestedEvenSum
 Review section 26: Coding Exercise 56: collectStrings
+REVIEW BST, AND HEAPS
+
  
